@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ZonaTMO - Exportar Pendientes
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  Exporta los títulos pendientes de ZonaTMO a TXT, JSON o Excel (CSV)
 // @author       You
 // @match        https://zonatmo.nakamasweb.com/*
@@ -11,6 +11,13 @@
 
 (function () {
     'use strict';
+
+    function getNombreLista() {
+        const select = document.querySelector('#list-input');
+        if (!select) return 'lista';
+        const opcion = select.options[select.selectedIndex];
+        return opcion ? opcion.text.trim().replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ _-]/g, '') : 'lista';
+    }
 
     function exportarTitulos() {
         const titulos = [];
@@ -55,6 +62,7 @@
     }
 
     function mostrarModal(datos) {
+        const nombre = getNombreLista();
         const texto = datos.map((d, i) =>
             `${i + 1}. [${d.tipo}] ${d.titulo} | Progreso: ${d.progreso}\n   ${d.url}`
         ).join('\n\n');
@@ -70,7 +78,7 @@
         modal.innerHTML = `
             <div style="background:#1e1e2e;color:#cdd6f4;padding:24px;border-radius:12px;
                         max-width:700px;width:90%;max-height:80vh;display:flex;flex-direction:column;gap:12px;">
-                <h3 style="margin:0;color:#cba6f7;">📋 ${datos.length} títulos encontrados</h3>
+                <h3 style="margin:0;color:#cba6f7;">📋 ${datos.length} títulos — ${nombre}</h3>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;">
                     <button id="btn-txt" style="flex:1;padding:8px;background:#89b4fa;color:#1e1e2e;
                         border:none;border-radius:6px;cursor:pointer;font-weight:bold;">⬇ TXT</button>
@@ -88,9 +96,9 @@
         `;
         document.body.appendChild(modal);
         modal.querySelector('#btn-cerrar').onclick = () => modal.remove();
-        modal.querySelector('#btn-txt').onclick = () => descargar('pendientes_manga.txt', texto, 'text/plain');
-        modal.querySelector('#btn-json').onclick = () => descargar('pendientes_manga.json', json, 'application/json');
-        modal.querySelector('#btn-csv').onclick = () => descargar('pendientes_manga.csv', '\uFEFF' + csv, 'text/csv;charset=utf-8');
+        modal.querySelector('#btn-txt').onclick = () => descargar(`${nombre}.txt`, texto, 'text/plain');
+        modal.querySelector('#btn-json').onclick = () => descargar(`${nombre}.json`, json, 'application/json');
+        modal.querySelector('#btn-csv').onclick = () => descargar(`${nombre}.csv`, '\uFEFF' + csv, 'text/csv;charset=utf-8');
         modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
     }
 
@@ -109,7 +117,7 @@
         btn.addEventListener('click', () => {
             const datos = exportarTitulos();
             if (datos.length === 0) {
-                alert('Primero selecciona "Pendientes" en el dropdown.');
+                alert('Primero selecciona una lista en el dropdown.');
                 return;
             }
             mostrarModal(datos);
