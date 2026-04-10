@@ -1,18 +1,13 @@
-# ZonaTMO - Exportar Pendientes 
+# ZonaTMO - Exportar Listas 
 
-Script de Tampermonkey para exportar tu lista de manga/manhua/manhwa pendientes de [ZonaTMO](https://zonatmo.nakamasweb.com/).
+Scripts de Tampermonkey para exportar tus listas de manga/manhua/manhwa de [ZonaTMO](https://zonatmo.nakamasweb.com/).
 
----
+Hay dos scripts disponibles según desde dónde quieras exportar:
 
-## ¿Qué hace?
-
-Agrega un botón rojo ** Exportar Pendientes** en la esquina inferior derecha de la página. Al hacer clic, muestra un modal con todos tus títulos pendientes y te permite descargarlos en tres formatos:
-
-| Formato | Descripción |
-|---|---|
-| **TXT** | Lista numerada con título, tipo, progreso y URL |
-| **JSON** | Datos estructurados, ideal para procesar con otros programas |
-| **Excel (CSV)** | Se abre directamente en Excel con columnas: #, Título, Tipo, Progreso, URL |
+| Script | Archivo | Página |
+|---|---|---|
+| **Exportar Pendientes** | `zonatmo-exportar-pendientes.user.js` | Página principal (listas personalizadas) |
+| **Exportar Perfil** | `zonatmo-perfil-exportar.user.js` | Páginas de perfil con paginación |
 
 ---
 
@@ -25,30 +20,43 @@ Agrega un botón rojo ** Exportar Pendientes** en la esquina inferior derecha de
 
 ---
 
-## Instalación
+## Instalación (ambos scripts)
 
 1. Instala Tampermonkey en tu navegador
 2. Abre el Dashboard de Tampermonkey
 3. Haz clic en **"Crear nuevo script"**
 4. Borra todo el contenido que aparece por defecto
-5. Copia y pega el contenido del archivo `zonatmo-exportar-pendientes.user.js`
+5. Copia y pega el contenido del archivo `.user.js` que quieras instalar
 6. Guarda con **Ctrl+S**
+7. Repite para el segundo script si lo necesitas
 
 ---
 
-## Uso
+## Script 1 — Exportar Pendientes
+
+**Archivo:** `zonatmo-exportar-pendientes.user.js`
+
+Funciona en la página principal de ZonaTMO donde tienes tus listas personalizadas (el dropdown con "Pendientes", "Siguiendo", etc.).
+
+### Uso
 
 1. Ve a [https://zonatmo.nakamasweb.com/](https://zonatmo.nakamasweb.com/)
 2. Inicia sesión si no lo has hecho
 3. Haz clic en **"Listas de programación"** en el menú
-4. Selecciona **"Pendientes"** en el dropdown
+4. Selecciona la lista que quieras en el dropdown (ej. "Pendientes")
 5. Espera a que cargue la lista
 6. Haz clic en el botón rojo **📥 Exportar Pendientes** (esquina inferior derecha)
-7. Elige el formato de descarga
+7. Elige el formato de descarga — el archivo se llamará igual que la lista seleccionada
 
----
+### Formatos de salida
 
-## Ejemplo de salida TXT
+| Formato | Columnas |
+|---|---|
+| **TXT** | Lista numerada con título, tipo, progreso y URL |
+| **JSON** | Datos estructurados |
+| **Excel (CSV)** | #, Título, Tipo, Progreso, URL |
+
+### Ejemplo TXT
 
 ```
 1. [MANGA] Mushoku Tensei: Isekai Ittara Honki Dasu | Progreso: 115.00 / 117.00
@@ -58,23 +66,71 @@ Agrega un botón rojo ** Exportar Pendientes** en la esquina inferior derecha de
    https://zonatmo.nakamasweb.com/library/manhua/12956/tales-of-demons-and-gods
 ```
 
-## Ejemplo de salida CSV (Excel)
+---
 
-| # | Título | Tipo | Progreso | URL |
-|---|---|---|---|---|
-| 1 | Mushoku Tensei | MANGA | 115.00 / 117.00 | https://... |
-| 2 | Tales of Demons and Gods | MANHUA | 476.50 / 511.00 | https://... |
+## Script 2 — Exportar Perfil (con paginación automática)
+
+**Archivo:** `zonatmo-perfil-exportar.user.js`
+
+Funciona en las páginas de perfil que tienen paginación. Navega automáticamente por todas las páginas y al terminar exporta la lista completa.
+
+### Páginas compatibles
+
+| URL | Lista |
+|---|---|
+| `https://zonatmo.nakamasweb.com/profile/pending` | Pendientes |
+| `https://zonatmo.nakamasweb.com/profile/follow` | Siguiendo |
+| `https://zonatmo.nakamasweb.com/profile/read` | Leídos |
+| `https://zonatmo.nakamasweb.com/profile/wish` | Deseados |
+| `https://zonatmo.nakamasweb.com/profile/have` | Tengo |
+| `https://zonatmo.nakamasweb.com/profile/abandoned` | Abandonados |
+
+### Uso
+
+1. Ve a cualquiera de las URLs de perfil listadas arriba
+2. Aparecerá el botón rojo **📥 Exportar Lista Completa** en la esquina inferior derecha
+3. Haz clic en el botón
+4. El script navega automáticamente por todas las páginas — el botón muestra el progreso:
+   `⏳ Página 3... (87 títulos)`
+5. Al terminar abre el modal con las opciones de descarga
+6. El archivo se descarga con el nombre de la lista (ej. `Siguiendo.csv`, `Pendientes.txt`)
+
+### Formatos de salida
+
+| Formato | Columnas |
+|---|---|
+| **TXT** | Lista numerada con títulos |
+| **JSON** | Array de títulos |
+| **Excel (CSV)** | #, Título |
+
+### Ejemplo TXT
+
+```
+1. Black Haze
+2. Mushoku Tensei
+3. Tales of Demons and Gods
+```
+
+### Notas importantes
+
+- El script usa `sessionStorage` para acumular títulos entre páginas — no cierres el navegador durante la recolección
+- Si no estás en la página 1 al hacer clic, te redirige automáticamente al inicio
+- Hay una pausa de 800ms entre páginas para no saturar el servidor
+- Al cerrar el modal se limpian los datos temporales
 
 ---
 
-## Notas
+## Notas generales
 
-- El CSV incluye BOM (`\uFEFF`) para que Excel muestre correctamente tildes y caracteres especiales
-- El script solo funciona cuando la lista de pendientes está cargada en pantalla
-- Compatible con Chrome, Edge y Firefox
+- Los CSV incluyen BOM (`\uFEFF`) para que Excel muestre correctamente tildes y caracteres especiales
+- Compatibles con Chrome, Edge y Firefox
+- Ambos scripts pueden estar instalados al mismo tiempo sin conflictos
 
 ---
 
-## Versión
+## Versiones
 
-**v1.5** — Soporte para TXT, JSON y Excel (CSV)
+| Script | Versión |
+|---|---|
+| Exportar Pendientes | v1.6 |
+| Exportar Perfil | v1.0 |
