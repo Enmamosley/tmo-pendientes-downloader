@@ -6,8 +6,8 @@ Hay dos scripts disponibles según desde dónde quieras exportar:
 
 | Script | Archivo | Página |
 |---|---|---|
-| **Exportar Pendientes** | `zonatmo-exportar-pendientes.user.js` | Página principal (listas personalizadas) |
-| **Exportar Perfil** | `zonatmo-perfil-exportar.user.js` | Páginas de perfil con paginación |
+| **Exportar Pendientes** | `exportar-pendientes.user.js` | Página principal (listas personalizadas) |
+| **Exportar Perfil** | `perfil-exportar.user.js` | Páginas de perfil con paginación |
 
 ---
 
