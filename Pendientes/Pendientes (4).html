@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pendientes — ZonaTMO</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,sans-serif;background:#0f0f1a;color:#e0e0e0;padding:24px}
+  h1{text-align:center;color:#cba6f7;margin-bottom:8px;font-size:2rem}
+  .meta{text-align:center;color:#888;margin-bottom:24px;font-size:.9rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+  .card{background:#1e1e2e;border-radius:10px;overflow:hidden;position:relative;
+        display:flex;flex-direction:column;transition:transform .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.4)}
+  .card-num{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.75);
+            color:#fff;font-size:.68rem;padding:2px 6px;border-radius:4px;z-index:1}
+  .cover{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+  .no-cover{width:100%;aspect-ratio:2/3;background:#313244;
+            display:flex;align-items:center;justify-content:center;
+            color:#555;font-size:.75rem}
+  .info{padding:8px;display:flex;flex-direction:column;gap:5px;flex:1}
+  .titulo{color:#cdd6f4;font-size:.78rem;font-weight:bold;text-decoration:none;
+          display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .titulo:hover{color:#cba6f7}
+  .badge{font-size:.65rem;color:#fff;padding:2px 7px;border-radius:4px;
+         width:fit-content;font-weight:bold;letter-spacing:.3px}
+  .progreso{font-size:.7rem;color:#a6adc8}
+  @media print{
+    body{background:#fff;color:#000}
+    .card{background:#f5f5f5;break-inside:avoid}
+    .titulo{color:#000}
+    .progreso{color:#444}
+  }
+</style>
+</head>
+<body>
+<h1>📚 Pendientes</h1>
+<p class="meta">86 títulos &nbsp;·&nbsp; Exportado desde ZonaTMO &nbsp;·&nbsp; 10/4/2026</p>
+<div class="grid">
+            <div class="card">
+                <div class="card-num">1</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e2149ebeca58.webp" alt="Parallel Paradise">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/24108/parallelparadise" target="_blank">Parallel Paradise</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- / 322.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">2</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b53becb914e8.webp" alt="Tensei Kizoku no Isekai Boukenroku ~Jichou wo Shiranai Kamigami no Shito~">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/40200/tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito" target="_blank">Tensei Kizoku no Isekai Boukenroku ~Jichou wo Shiranai Kamigami no Shito~</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">41.00 / 77.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">3</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/64cacac18e007.webp" alt="Kage no Jitsuryokusha ni Naritakute!">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/42185/kagenojitsuryokushaninaritakute" target="_blank">Kage no Jitsuryokusha ni Naritakute!</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">79.10 / 79.20</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">4</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d9609f30d308.webp" alt="Tales of Demons and Gods">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/12956/tales-of-demons-and-gods" target="_blank">Tales of Demons and Gods</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">476.50 / 511.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">5</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d22cb3d43277.webp" alt="Naze Boku no Sekai wo Daremo Oboeteinai no ka?">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/39195/naze-boku-no-sekai-wo-daremo-oboeteinai-no-ka" target="_blank">Naze Boku no Sekai wo Daremo Oboeteinai no ka?</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">42.00 / 56.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">6</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/8635_TMOManga57fccb472ed55.webp" alt="Mushoku Tensei: Isekai Ittara Honki Dasu">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8635/mushokutenseiisekaiittarahonkidasu" target="_blank">Mushoku Tensei: Isekai Ittara Honki Dasu</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">115.00 / 117.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">7</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b35b03f10f2f.webp" alt="Versatile Mage">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/39913/versatilemage" target="_blank">Versatile Mage</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">320.00 / 1111.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">8</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f28ddf716f58.webp" alt="Combat Continent">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/8288/combat-continent" target="_blank">Combat Continent</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">278.00 / 290.50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">9</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/12643_TMOmanga151640.webp" alt="The great ruler">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/12643/el-gran-gobernante" target="_blank">The great ruler</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">146.00 / 282.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">10</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/60174080c158d.webp" alt="Star Martial God Technique">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/20724/star-martial-god-technique" target="_blank">Star Martial God Technique</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">447.00 / 836.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">11</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/6328805c051e9.webp" alt="Owari no Seraph">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8190/Owari-no-Seraph" target="_blank">Owari no Seraph</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">88.00 / 151.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">12</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d22c71aefc3c.webp" alt="Saihate no Paladin">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/38531/saihatenopaladin" target="_blank">Saihate no Paladin</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- /72.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">13</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/615b1495840fa.webp" alt="Death March kara Hajimaru Isekai Kyousoukyoku">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/12688/deathmarchkarahajimaruisekaikyousoukyoku" target="_blank">Death March kara Hajimaru Isekai Kyousoukyoku</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">83.00 / 112.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">14</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5c1b6c9c98aff.webp" alt="Tate no Yuusha no Nariagari">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8385/tatenoyuushanonariagari" target="_blank">Tate no Yuusha no Nariagari</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">82.00 / 121.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">15</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d51bf4d928d7.webp" alt="Fairy Tail: 100 Years Quest">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/40259/fairy-tail-100-years-quest" target="_blank">Fairy Tail: 100 Years Quest</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">18.50 / 206.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">16</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e911d4588a46.webp" alt="Bug player">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/49211/bug-player" target="_blank">Bug player</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">85.00 / 137.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">17</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e236194a67a6.webp" alt="World Trigger">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/9461/world-trigger" target="_blank">World Trigger</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">204.00 / 242.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">18</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5fd535eb41d60.webp" alt="S Rank Boukensha de aru Ore no Musume-tachi wa Juudo no Father Con deshita">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/49945/s-rank-boukensha-de-aru-ore-no-musume-tachi-wa-juudo-no-father-con-deshita" target="_blank">S Rank Boukensha de aru Ore no Musume-tachi wa Juudo no Father Con deshita</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">34.00 / 55.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">19</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/64cb883e56d87.webp" alt="Tensei Shitara Slime Datta Ken">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/12223/tenseishitaraslimedattaken" target="_blank">Tensei Shitara Slime Datta Ken</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">124.00 / 139.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">20</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/29564_TMOManga59862ce7745a3.webp" alt="Isekai Cheat Magician">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/29564/Isekai-Cheat-Magician" target="_blank">Isekai Cheat Magician</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">24.00 / 28.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">21</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d03089589122.webp" alt="Genjitsushugi Yuusha no Oukoku Saikenki">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/28684/genjitsushugiyuushanooukokusaikenki" target="_blank">Genjitsushugi Yuusha no Oukoku Saikenki</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">49.00 / 60.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">22</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b78a9cb70990.webp" alt="Perfect Half">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/17687/perfect-half" target="_blank">Perfect Half</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">96.00 / 191.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">23</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/614fa8c82fce9.webp" alt="Tonikaku Kawaii">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/36144/tonikaku-kawaii" target="_blank">Tonikaku Kawaii</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">43.00 / 335.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">24</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/66ec69191b543.webp" alt="World Teacher: Isekaishiki Kyouiku Agent">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/21495/worldteacherisekaishikikyouikuagent" target="_blank">World Teacher: Isekaishiki Kyouiku Agent</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">22.00 / 41.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">25</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/6361ad32e22ac.webp" alt="Maou no Ore ga Dorei Elf wo Yome ni Shitanda ga, Dou Medereba Ii?">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/39199/maounooregadoreielfwoyomenishitandagadoumederebaii" target="_blank">Maou no Ore ga Dorei Elf wo Yome ni Shitanda ga, Dou Medereba Ii?</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">40.00 / 76.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">26</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/607207573093b.webp" alt="Yasei no Last Boss Ga Arawareta!">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/29565/yaseinolastbossgaarawaretakokuyokunohaou" target="_blank">Yasei no Last Boss Ga Arawareta!</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">40.00 / 50.20</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">27</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/64c00b2373118.webp" alt="Black Clover">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/204/black-clover" target="_blank">Black Clover</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">248.00 / 389.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">28</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/34477_TMOManga5a578bff0a07f.webp" alt="Sozai Saishuka no Isekai Ryokouki">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/34477/sozaisaishukanoisekairyokouki" target="_blank">Sozai Saishuka no Isekai Ryokouki</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">26.00 / 62.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">29</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/69059a04db331.webp" alt="Kaifuku Jutsushi no Yarinaoshi">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/28551/kaifukujutsushinoyarinaoshi" target="_blank">Kaifuku Jutsushi no Yarinaoshi</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">34.10 / 69.10</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">30</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d2f5a58997d5.webp" alt="Kenja no Mago">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/16476/kenjanomago" target="_blank">Kenja no Mago</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">45.10 / 85.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">31</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f7e48e544de6.webp" alt="The New Gate">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/9458/the-new-gate" target="_blank">The New Gate</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">69.00 / 99.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">32</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/38417_TMOManga5ad1a60c6206f.webp" alt="Cultivation Chat Group">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/38417/cultivation-chat-group" target="_blank">Cultivation Chat Group</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">163.00 / 231.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">33</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/61c51f85d10d7.webp" alt="Shikkaku Mon no Saikyou Kenja - Sekai Saikyou no Kenja ga Sara ni Tsuyoku naru Tame ni Tensei Shimashita">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/29156/shikkakumonnosaikyoukenjasekaisaikyounokenjagasaranitsuyokunarutamenitenseishimashita" target="_blank">Shikkaku Mon no Saikyou Kenja - Sekai Saikyou no Kenja ga Sara ni Tsuyoku naru Tame ni Tensei Shimashita</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">49.10 / 80.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">34</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5bccad7aabd34.webp" alt="Jishou F-Rank no Oniisama ga Game de Hyouka sareru Gakuen no Chouten ni Kunrin suru Sou desu yo?">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/38374/Jishou-FRank-no-Oniisama-" target="_blank">Jishou F-Rank no Oniisama ga Game de Hyouka sareru Gakuen no Chouten ni Kunrin suru Sou desu yo?</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">31.00 / 49.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">35</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/655bd0edd6aee.webp" alt="MAOU NI NATTA NODE, DUNGEON TSUKUTTE JINGAI MUSUME TO HONOBONO SURU">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/38899/maou-ni-natta-node-dungeon-tsukutte-jingai-musume-to-honobono-suru" target="_blank">MAOU NI NATTA NODE, DUNGEON TSUKUTTE JINGAI MUSUME TO HONOBONO SURU</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">26.00 / 65.20</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">36</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5bf9eeda64dbe.webp" alt="Nande koko ni sensei ga!?">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/20858/nande-koko-ni-sensei-ga" target="_blank">Nande koko ni sensei ga!?</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">36.00 / 120.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">37</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e8e71b275852.webp" alt="Dios de las artes marciales">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/33553/god-of-martial-arts" target="_blank">Dios de las artes marciales</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">123.00 / 267.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">38</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/607de16b3ddf2.webp" alt="Assassin's Pride">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/27987/assassinspride" target="_blank">Assassin's Pride</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">29.00 / 51.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">39</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5cfaad2c3e92d.webp" alt="The Scholar's Reincarnation">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/20482/la-reencarnacion-del-erudito" target="_blank">The Scholar's Reincarnation</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">148.00 / 182.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">40</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/650724e54b50b.webp" alt="MAOU-SAMA NO MACHIZUKURI! SAIKYOU NO DANJON WA KINDAI TOSHI">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/36993/maou-sama-no-machizukuri-saikyou-no-dungeon-wa-kindai-toshi" target="_blank">MAOU-SAMA NO MACHIZUKURI! SAIKYOU NO DANJON WA KINDAI TOSHI</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">24.00 / 42.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">41</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/12856_TMOmanga020122.webp" alt="Wu Dong Qian Kun">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/12856/wu-dong-qian-kun" target="_blank">Wu Dong Qian Kun</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">115.00 / 165.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">42</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5fd022cb211bd.webp" alt="Martial Peak">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/38921/martial-peak" target="_blank">Martial Peak</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">2595.00 / 2600.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">43</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5fedd180bda3b.webp" alt="Yakumo-San Wa Edzuke Ga Shitai">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/21519/yakumosanwaezukegashitai" target="_blank">Yakumo-San Wa Edzuke Ga Shitai</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">41.00 / 79.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">44</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b2e6018e248b.webp" alt="¿Héroe? Lo deje hace mucho tiempo">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/36401/heroiquitalongtimeago" target="_blank">¿Héroe? Lo deje hace mucho tiempo</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">223.00 / 488.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">45</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f29ae7a087c3.webp" alt="Batalla a través de los cielos ">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/12266/dou-po-cang-qiong" target="_blank">Batalla a través de los cielos </a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">415.00 / 432.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">46</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f29b48455e1c.webp" alt="4 Cut Hero">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/12420/4cuthero" target="_blank">4 Cut Hero</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">158.00 / 251.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">47</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b30f9637f2e4.webp" alt="Spirit Sword Sovereign">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/39862/spirit-sword-sovereign" target="_blank">Spirit Sword Sovereign</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">62.00 / 265.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">48</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5cc11f5550739.webp" alt="No es la primera vez de Meguro-san">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/41358/megurosanwahajimetejanai" target="_blank">No es la primera vez de Meguro-san</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- / 78.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">49</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/681389f702dcf.webp" alt="Kekkon Yubiwa Monogatari">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8087/kekkonyubiwamonogatari" target="_blank">Kekkon Yubiwa Monogatari</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">48.00 / 86.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">50</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5beb2f44b1960.webp" alt="Rise of The Demon King">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/41601/rise-of-the-demon-king" target="_blank">Rise of The Demon King</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">15.00 / 215.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">51</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5bd38ba06e9a8.webp" alt="The Ceo's Pregnant Wife ">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/40994/the-ceos-pregnant-wife" target="_blank">The Ceo's Pregnant Wife </a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">19.00 / 251.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">52</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e1e572150dda.webp" alt="Renacimiento Del Emperador">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/47781/rebirth-of-abandoned-young-master" target="_blank">Renacimiento Del Emperador</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">180.00 / 217.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">53</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5ed7c89d48004.webp" alt="Edens Zero">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/39873/edenszero" target="_blank">Edens Zero</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">62.00 / 293.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">54</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d924d4309b18.webp" alt="Dr. Stone">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/23741/dr-stone" target="_blank">Dr. Stone</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">233.00 / 236.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">55</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f45771e879ea.webp" alt="Hitman">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/39828/hitman" target="_blank">Hitman</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- / 127.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">56</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5cc94ccd403b8.webp" alt="Regreso del mundo de los inmortales.">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/44001/returningfromtheimmortalworld" target="_blank">Regreso del mundo de los inmortales.</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">123.00 / 133.50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">57</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/6212b1e85e1f2.webp" alt="Nisekoi">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/5763/nisekoi" target="_blank">Nisekoi</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">230.40 / 230.60</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">58</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/30900_TMOManga59c1811e5e4ff.webp" alt="Sachi-iro no One Room">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/30900/sachi-iro-no-one-room" target="_blank">Sachi-iro no One Room</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- / 68.60</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">59</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d7098200b779.webp" alt="Shingeki no Kyojin">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/7528/shingeki-no-kyojin" target="_blank">Shingeki no Kyojin</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">139.00 / 139.50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">60</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/25491_TMOManga5914b27244a16.webp" alt="Hana Haru">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/25491/hana-haru" target="_blank">Hana Haru</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">69.00 / 113.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">61</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e283e1726909.webp" alt="UQ Holder!">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8777/uq-holder" target="_blank">UQ Holder!</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">135.00 / 192.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">62</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/16778_TMOManga575e02d9ca2d7.webp" alt="Combate Continental 3: La leyenda del Rey Dragon">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/16778/combate-continental-3-la-leyenda-del-rey-dragon" target="_blank">Combate Continental 3: La leyenda del Rey Dragon</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">85.00 / 190.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">63</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/33541_TMOManga5a29a8244aae7.webp" alt="My Succubus Girlfriend">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/33541/my-succubus-girlfriend" target="_blank">My Succubus Girlfriend</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">- / 44.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">64</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e9e8be31e8e0.webp" alt="Good Reaper">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/13795/good-reaper" target="_blank">Good Reaper</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">154.00 / 156.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">65</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e2fc0408d53e.webp" alt="Hiraheishi wa Kako wo Yumemiru">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/20463/hiraheishi-wa-kako-wo-yumemiru" target="_blank">Hiraheishi wa Kako wo Yumemiru</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">57.00 / 62.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">66</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5d3b42ef43985.webp" alt="The Lord of No Boundary">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/45281/the-lord-of-no-boundary" target="_blank">The Lord of No Boundary</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">51.00 / 120.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">67</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/621650fa09bb5.webp" alt="An Innocent Sin">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/21832/an-innocent-sin" target="_blank">An Innocent Sin</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">48.00 / 125.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">68</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f9ded51a5e63.webp" alt="Teacher Punishment">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/54693/teacher-punishment" target="_blank">Teacher Punishment</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">1.00 / 60.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">69</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b314e5fd0af6.webp" alt="Demonic Housekeeper">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/39869/tale-of-otaku-and-demons" target="_blank">Demonic Housekeeper</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">6.00 / 153.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">70</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5fda914d80c3e.webp" alt="Shen Yin Wang Zuo">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/10364/shen-yin-wang-zuo" target="_blank">Shen Yin Wang Zuo</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">135.00 / 179.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">71</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/14080_TMOmanga022756.webp" alt="Qishi Huanxiang Ye">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/14080/qishi-huanxiang-ye" target="_blank">Qishi Huanxiang Ye</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">40.00 / 168.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">72</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/38582_TMOManga5adcd37f560cb.webp" alt="Reborn :House of revenge">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/38582/reborn-house-of-revenge" target="_blank">Reborn :House of revenge</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">96.00 / 138.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">73</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5c62598f35c3c.webp" alt="WARBLE">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/42761/warble" target="_blank">WARBLE</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">108.00 / 116.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">74</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/11963_TMOmanga181027.webp" alt="Mang Huang Ji ">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/11963/desolate-era" target="_blank">Mang Huang Ji </a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">36.00 / 51.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">75</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/8181_TMOmanga083915.webp" alt="Rain">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/8181/rain" target="_blank">Rain</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">50.00 / 99.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">76</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5f28ed9aded6d.webp" alt="World’s End Harem">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/16052/shuumatsu-no-harem" target="_blank">World’s End Harem</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">- / 85.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">77</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/39670_TMOManga5b1ab24ac5654.webp" alt="Long Fu Zhi Wangdao Tianxia">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/39670/Long-Fu-Zhi-Wangdao-Tianx" target="_blank">Long Fu Zhi Wangdao Tianxia</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">119.00 / 197.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">78</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5df7ced4f336a.webp" alt="Lilith's Cord">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/16994/liliths-cord" target="_blank">Lilith's Cord</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">62.00 / 93.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">79</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5c86d0569cf29.webp" alt="Futaba-san Chi no Kyoudai">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/25137/futaba-san-chi-no-kyoudai" target="_blank">Futaba-san Chi no Kyoudai</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">15.00 / 41.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">80</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e381b15967f5.webp" alt="Rakudai Kishi no Cavalry">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/9149/rakudaikishinocavalry" target="_blank">Rakudai Kishi no Cavalry</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">40.00 / 45.50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">81</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b3834754dd6f.webp" alt="Kuro no Souzou Shoukanshi - Tenseisha no Hangyaku ">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/29566/kuro-no-souzou-shoukanshi-tenseisha-no-hangyaku" target="_blank">Kuro no Souzou Shoukanshi - Tenseisha no Hangyaku </a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">15.00 / 26.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">82</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5badca7a2aea2.webp" alt="GREATEST OUTCAST">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/15207/greatest-outcast" target="_blank">GREATEST OUTCAST</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">73.00 / 81.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">83</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5b78b144912d0.webp" alt="Appetite">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhwa/26525/appetite" target="_blank">Appetite</a>
+                    <span class="badge" style="background:#9b59b6">MANHWA</span>
+                    <span class="progreso">80.00 / 99.50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">84</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/5e94087f83b32.webp" alt="Hataraku Maousama- High School">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/9546/hataraku-maou-sama-high-school" target="_blank">Hataraku Maousama- High School</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">12.00 / 32.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">85</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/27333_TMOManga5936ddfa1ad93.webp" alt="Oretachi no Party wa Machigatteiru">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manga/27333/oretachi-no-party-wa-machigatteiru" target="_blank">Oretachi no Party wa Machigatteiru</a>
+                    <span class="badge" style="background:#4f8ef7">MANGA</span>
+                    <span class="progreso">25.00 / 30.00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">86</div>
+                <img class="cover" src="https://otakuteca.com/images/books/cover/15128_TMOmanga100524.webp" alt="The Magic Chef of Ice and Fire">
+                <div class="info">
+                    <a class="titulo" href="https://zonatmo.nakamasweb.com/library/manhua/15128/themagicchefoficeandfire" target="_blank">The Magic Chef of Ice and Fire</a>
+                    <span class="badge" style="background:#e07b3c">MANHUA</span>
+                    <span class="progreso">- / 24.00</span>
+                </div>
+            </div></div>
+</body>
+</html>
